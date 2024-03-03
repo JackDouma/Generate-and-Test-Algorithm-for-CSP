@@ -27,18 +27,13 @@ def constraintCheck(solution, constraints):
         if operator == '<':
             if solution[a] >= solution[b]:
                 return False
-        if operator == '>':
+        elif operator == '>':
             if solution[a] <= solution[b]:
                 return False
+        
+    return True
             
-        #check graph
-        if solution['B'] == 2 and solution['A'] == 1 and solution['C'] in [3, 4]:
-            return True
-        elif solution['B'] == 3 and solution['C'] == 4 and solution['A'] in [1, 2]:
-            return True
-        else:
-            return False
-            
+        
 #create variables
 variables = ['A', 'B', 'C']
 domains = [[1, 2, 3, 4] for _ in variables]
